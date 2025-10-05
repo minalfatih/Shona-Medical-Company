@@ -18,7 +18,7 @@ a {
 }
 body {
   position: relative;
-  background-image: url('/images/bg-intro.svg');
+  background-image: url('../images/bg-intro.svg');
   background-repeat: no-repeat;
   background-position-x: top right;
 }
