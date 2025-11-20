@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Shona Medical Company has work in the field of health medical resources which aims to develop the medical field by importing the best advanced medical devices and accompanying the field of advanced technology." />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.jpg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="./dist/aos.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>All Creations - SHONA Medical</title>
+  <style>
+    /* Filter buttons */
+    .filter-btn {
+      margin: 5px 5px;
+      padding: 8px 18px;
+      border: 1px solid #483f95;
+      background-color: #fff;
+      color: #483f95;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 25px;
+      font-size: 14px;
+    }
+
+    .filter-btn:hover {
+      background-color: #6c5ce7;
+      color: #fff;
+    }
+
+    .filter-btn.active {
+      background-color: #483f95;
+      color: #fff;
+    }
+
+    /* Creations grid */
+    .creation-card {
+      cursor: pointer;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 15px;
+      position: relative;
+    }
+
+    .creation-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .creation-card .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(72, 63, 149, 0.6);
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s ease;
+    }
+
+    .creation-card:hover .overlay {
+      opacity: 1;
+    }
+
+    .creation-card:hover .creation-img {
+      transform: scale(1.05);
+    }
+
+    .overlay p {
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 0 10px;
+      font-size: 14px;
+    }
+
+    /* Modal */
+    .modal-content {
+      border-radius: 15px;
+    }
+
+    .modal-header {
+      background: #483f95;
+      color: #fff;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    .modal-body {
+      color: #333;
+      font-size: 14px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .creation-card {
+        height: 220px;
+      }
+
+      .overlay p {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .creation-card {
+        height: 180px;
+      }
+
+      .overlay p {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .creation-card {
+        height: 150px;
+      }
+
+      .overlay p {
+        font-size: 11px;
+      }
+
+      .filter-btn {
+        font-size: 12px;
+        padding: 6px 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container py-5">
+    <h1 class="text-center mb-5 text-uppercase" style="color:#483f95;">All Creations</h1>
+
+    <!-- Filter Buttons -->
+    <div class="text-center mb-4">
+      <button class="btn filter-btn active" data-filter="all">All</button>
+      <button class="btn filter-btn" data-filter="dental">Dental</button>
+      <button class="btn filter-btn" data-filter="beds">Beds</button>
+      <button class="btn filter-btn" data-filter="monitor">Monitors</button>
+      <button class="btn filter-btn" data-filter="equipment">Equipment</button>
+    </div>
+
+    <!-- Creations Grid -->
+    <div class="row gap-3 gap-md-0" id="creations-grid">
+      <div class="col-12 col-md-6 col-lg-3 creation-item" data-category="dental" data-aos="fade-up">
+        <div class="creation-card" data-title="Dental Unit"
+          data-description="High-quality dental unit for clinics and hospitals.">
+          <img src="images/img1.jpg" class="creation-img" alt="Dental Unit">
+          <div class="overlay">
+            <p>Dental Unit</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 creation-item" data-category="beds" data-aos="fade-up">
+        <div class="creation-card" data-title="Electronic Beds"
+          data-description="Advanced electronic beds with multiple functions.">
+          <img src="images/img2.jpg" class="creation-img" alt="Electronic Beds">
+          <div class="overlay">
+            <p>Electronic Beds</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 creation-item" data-category="monitor" data-aos="fade-up">
+        <div class="creation-card" data-title="Star8000H Patient Monitor"
+          data-description="Patient monitoring system with advanced features.">
+          <img src="images/img3.jpg" class="creation-img" alt="Monitor">
+          <div class="overlay">
+            <p>Star8000H Monitor</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 creation-item" data-category="equipment" data-aos="fade-up">
+        <div class="creation-card" data-title="L6 Standard Configuration"
+          data-description="Standard hospital configuration equipment for efficient operations.">
+          <img src="images/img4.jpg" class="creation-img" alt="L6 Configuration">
+          <div class="overlay">
+            <p>L6 Configuration</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal for Description -->
+  <div class="modal fade" id="creationModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="modalDescription"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="p-4 mt-5 text-center" style="background:#333; color:#6c5ce7;">
+    <p>© 2025 SHONA Medical. All rights reserved.</p>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="./dist/aos.js"></script>
+  <script>
+    AOS.init({ easing: "ease-in-out-sine" });
+
+    // Filter functionality with active state
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.creation-item');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        items.forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) item.style.display = 'block';
+          else item.style.display = 'none';
+        });
+      });
+    });
+
+    // Modal functionality
+    const creationCards = document.querySelectorAll('.creation-card');
+    const modal = new bootstrap.Modal(document.getElementById('creationModal'));
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+
+    creationCards.forEach(card => {
+      card.addEventListener('click', () => {
+        modalTitle.innerText = card.dataset.title;
+        modalDescription.innerText = card.dataset.description;
+        modal.show();
+      });
+    });
+  </script>
+</body>
+
+</html>
